@@ -34,7 +34,14 @@ The Kafka Producer produces fake events of a driving truck into the topic `truck
 Run KafkaProducer:
 ```
 cd KafkaProducer
+```
+**Linux:**
+```
 ./gradlew run
+```
+**Windows:**
+```
+gradlew.bat run
 ```
 Verify that data is produced correctly:
 ```
