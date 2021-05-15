@@ -12,37 +12,25 @@ It focuses on simplicity and can be seen as a baseline for similar projects.
 
 ## Prerequisites
 
+* [docker](https://docs.docker.com/get-docker/)
 * [docker-compose](https://docs.docker.com/compose/install/)
 
 ## Set up
-```
-docker build -t rstudio/rjava:0.1.0 .
-```
-It builds a docker image using rstudio as a base image and additionally installs `rJava`
-which is required for `rkafka`.
+
 ```
 docker-compose up -d
 ```
 It starts:
 * Zookeeper
 * Kafka Broker
-* RStudio with [rJava](https://cran.r-project.org/web/packages/rJava/rJava.pdf)
+* Kafka Producer
+  * built docker image executing fatJar
+* RStudio
+    * built docker image RStudio with [rJava](https://cran.r-project.org/web/packages/rJava/rJava.pdf) installed which is required for [rkafka](https://cran.rstudio.com/web/packages/rkafka/rkafka.pdf)
 
 ## Kafka Producer
 
 The Kafka Producer produces fake events of a driving truck into the topic `truck-topic` in `JSON` format every two seconds.
-Run KafkaProducer:
-```
-cd KafkaProducer
-```
-**Linux:**
-```
-./gradlew run
-```
-**Windows:**
-```
-gradlew.bat run
-```
 Verify that data is produced correctly:
 ```
 docker-compose exec broker bash

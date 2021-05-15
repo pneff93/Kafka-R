@@ -29,8 +29,16 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
 
+  kafkaProducer:
+    image: kafkaproducer:0.1.0
+    build: ./KafkaProducer
+    container_name: kafkaProducer
+    depends_on:
+      - broker
+
   rstudio:
     image: rstudio/rjava:0.1.0
+    build: .
     container_name: rstudio
     volumes:
       - ./Data.R:/home/Data.R

@@ -1,3 +1,5 @@
+import org.gradle.jvm.tasks.Jar
+
 plugins {
     kotlin("jvm") version "1.4.31"
     application
@@ -21,4 +23,13 @@ dependencies {
     implementation("org.apache.logging.log4j:log4j-core:2.12.0")
     implementation("org.apache.logging.log4j:log4j-slf4j-impl:2.12.0")
     implementation("io.ktor:ktor-server-netty:1.2.2")
+}
+
+val fatJar = task("fatJar", type = Jar::class) {
+    baseName = "fatApp"
+    manifest {
+        attributes["Main-Class"] = application.mainClass
+    }
+    from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
+    with(tasks.jar.get() as CopySpec)
 }
