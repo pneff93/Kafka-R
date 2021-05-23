@@ -36,6 +36,7 @@ Verify that data is produced correctly:
 docker-compose exec broker bash
 kafka-console-consumer --bootstrap-server broker:9092 --topic truck-topic
 ```
+![](KafkaProducer.gif)
 
 ## RStudio
 Open RStudio via:
@@ -46,6 +47,8 @@ The username is `user` and password `password`.
 
 Under `/home` you can run `Data.R`. It first creates a `simpleConsumer`, then requests all data from the beginning of the topic
 and finally converts the JSON string into a dataframe with `jsonlite`. 
+
+![](RStudio.gif)
 
 ## Sources
 
