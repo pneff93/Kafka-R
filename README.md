@@ -2,7 +2,7 @@
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-![](image.png)
+![](overview.png)
 This small tutorial creates a data pipeline from Apache Kafka into R using the [rkafka](https://cran.rstudio.com/web/packages/rkafka/rkafka.pdf) package.
 It focuses on simplicity and can be seen as a baseline for similar projects.
 
@@ -24,7 +24,7 @@ It starts:
 * Zookeeper
 * Kafka Broker
 * Kafka Producer
-  * built docker image executing fatJar
+  * built docker image executing fat JAR
 * RStudio
     * built docker image RStudio with [rJava](https://cran.r-project.org/web/packages/rJava/rJava.pdf) installed which is required for [rkafka](https://cran.rstudio.com/web/packages/rkafka/rkafka.pdf)
 
@@ -46,7 +46,7 @@ localhost:8787
 The username is `user` and password `password`.
 
 Under `/home` you can run `Data.R`. It first creates a `simpleConsumer`, then requests all data from the beginning of the topic
-and finally converts the JSON string into a dataframe with `jsonlite`. 
+and finally converts the JSON string into a dataframe with [jsonlite](https://cran.r-project.org/web/packages/jsonlite/jsonlite.pdf). 
 
 ![](RStudio.gif)
 
