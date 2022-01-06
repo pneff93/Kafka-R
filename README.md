@@ -5,7 +5,8 @@
 ![](overview.png)
 
 This small tutorial creates a data pipeline from Apache Kafka into R using the [rkafka](https://cran.rstudio.com/web/packages/rkafka/rkafka.pdf) package.
-It focuses on simplicity and can be seen as a baseline for similar projects.
+It focuses on simplicity and can be seen as a baseline for similar projects. You can read more about in my blog article: 
+[Create a Data Analysis Pipeline with Apache Kafka and RStudio](https://www.confluent.io/de-de/blog/data-analytics-pipeline-with-kafka-and-rstudio/).
 
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
