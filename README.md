@@ -4,6 +4,22 @@
 
 ![](overview.png)
 
+---
+> [!WARNING]
+> **rkafka**
+>
+> Package ‘rkafka’ was removed from the CRAN repository.
+>
+>Formerly available versions can be obtained from the archive.
+>
+>Archived on 2023-05-23 as issues were not corrected in time.
+>
+>A summary of the most recent check results can be obtained from the check results archive.
+>
+>Please use the canonical form https://CRAN.R-project.org/package=rkafka to link to this page.
+---
+
+
 This small tutorial creates a data pipeline from Apache Kafka into R using the [rkafka](https://cran.rstudio.com/web/packages/rkafka/rkafka.pdf) package.
 It focuses on simplicity and can be seen as a baseline for similar projects. You can read more about it in my blog article: 
 [Create a Data Analysis Pipeline with Apache Kafka and RStudio](https://www.confluent.io/de-de/blog/data-analytics-pipeline-with-kafka-and-rstudio/).
